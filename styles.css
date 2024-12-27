@@ -1,0 +1,186 @@
+/* styles.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #222;
+    line-height: 1.6;
+    perspective: 1000px;
+}
+
+header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+/* Body and header styles remain unchanged */
+
+/* Navbar container styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #333;  /* Darker background for navbar */
+    color: white;
+    border-bottom: 4px solid #4b6cb7;  /* Slightly lighter blue for the bottom border */
+    transform: rotateX(10deg);
+}
+
+/* List styling for navbar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Individual list items */
+.navbar li {
+    margin: 0 15px;  /* Adds more space between the items */
+}
+
+/* Style for each nav item */
+.navbar a {
+    color: #f4f4f4;  /* Lighter color for better contrast */
+    text-decoration: none; /* No underlining */
+    font-weight: bold;
+    padding: 12px 25px;  /* Increased padding for better spacing */
+    border-radius: 35px;  /* More rounded corners */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);  /* Gradient matching the page theme */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);  /* Soft shadow */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the nav items */
+.navbar a:hover {
+    transform: scale(1.1) rotateY(10deg);  /* Slightly less rotation */
+    box-shadow: 0 15px 20px rgba(103, 137, 255, 0.5);  /* Soft blue glow on hover */
+    background: linear-gradient(135deg, #2575fc, #6a11cb);  /* Reversed gradient on hover */
+    color: #ffffff;  /* Ensure text stays white */
+}
+
+/* Active nav item styling */
+.navbar a.active {
+    background: linear-gradient(135deg, #ff6b81, #ff4b2b);  /* A more vibrant gradient for active items */
+    transform: rotateX(-5deg);
+    color: white;
+}
+
+/* Responsive handling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the items vertically on small screens */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Ensure the list items stack vertically */
+    }
+
+    .navbar li {
+        margin-bottom: 12px;  /* Adds spacing between the items when stacked */
+    }
+}
+
+/* The rest of the existing styles for main, footer, etc. remain unchanged */
+
+
+main {
+    padding: 30px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1.5s ease;
+}
+
+main h1, main h2 {
+    color: #2575fc;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+}
+
+main img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+main img:hover {
+    transform: rotateY(10deg) scale(1.05);
+}
+
+main a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+main a:hover {
+    transform: scale(1.1) rotateZ(10deg);
+    box-shadow: 0 10px 20px rgba(42, 82, 190, 0.5);
+}
+
+footer {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ff758c;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff7eb3;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
